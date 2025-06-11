@@ -1,77 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Fonts CDN (Roboto) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <!-- BOOTSTRAP ICONS CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <!-- CSS FILE -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Homepage Mercadolibre</title>
-</head>
-<body>
-  
-  <!-- Header Section -->
-  <header class="header">
-    <nav class="nav">
-      <div class="container__nav container">
-
-        <!-- Nav Content (Top) -->
-        <div class="nav__top">
-          <div class="nav__logo">
-            <img src="./assets/imgs/logo-mercadolibre.png" alt="Logo Mercadolibre">
-          </div>
-          <div class="nav__input">
-            <input type="search" placeholder="Buscar productos, marcas y más...">
-            <button class="nav__input--button">
-              <i class="bi bi-search"></i>
-            </button>
-          </div>
-          <div class="nav__sponsor">
-            <img src="./assets/imgs/nav-sponsor-image.webp" alt="Nav Sponsor">
-          </div>
-        </div>
-
-        <!-- Nav Content (Bottom) -->
-        <div class="nav__bottom">
-          <div class="nav__bottom--location">
-            <i class="bi bi-geo-alt"></i>
-            <div class="nav__location--text">
-              <span>Ingresa tu</span>
-              <span>ubicación</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts CDN (Roboto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BOOTSTRAP ICONS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Homepage Mercadolibre</title>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <nav class="nav">
+        <div class="container__nav container">
+          <!-- Nav Content (Top) -->
+          <div class="nav__top">
+            <div class="nav__logo">
+              <img
+                src="./assets/imgs/logo-mercadolibre.png"
+                alt="Logo Mercadolibre"
+              />
+            </div>
+            <div class="nav__input">
+              <input
+                type="search"
+                placeholder="Buscar productos, marcas y más..."
+              />
+              <button class="nav__input--button">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+            <div class="nav__sponsor">
+              <img
+                src="./assets/imgs/nav-sponsor-image.webp"
+                alt="Nav Sponsor"
+              />
             </div>
           </div>
 
-          <div class="nav__bottom--links">
-            <a class="nav__link" href="#">Categorías <i class="bi bi-arrow-down-short"></i></a>
-            <a class="nav__link" href="#">Ofertas</a>
-            <a class="nav__link" href="#">Cupones</a>
-            <a class="nav__link supermarket__link" href="#">Supermercado</a>
-            <a class="nav__link" href="#">Moda</a>
-            <a class="nav__link" href="#">Vender</a>
-            <a class="nav__link" href="#">Ayuda / PQR</a>
-          </div>
+          <!-- Nav Content (Bottom) -->
+          <div class="nav__bottom">
+            <div class="nav__bottom--location">
+              <i class="bi bi-geo-alt"></i>
+              <div class="nav__location--text">
+                <span>Ingresa tu</span>
+                <span>ubicación</span>
+              </div>
+            </div>
 
-          <div class="nav__bottom--acount">
-            <a class="nav__acount--link" href="#">
-              Crea tu cuenta
-            </a>
-            <a class="nav__acount--link" href="#">
-              Ingresa
-            </a>
-            <a class="nav__acount--link" href="#">Mis compras</a>
-            <i class="bi bi-cart-dash"></i>
+            <div class="nav__bottom--links">
+              <a class="nav__link" href="#"
+                >Categorías <i class="bi bi-arrow-down-short"></i
+              ></a>
+              <a class="nav__link" href="#">Ofertas</a>
+              <a class="nav__link" href="#">Cupones</a>
+              <a class="nav__link supermarket__link" href="#">Supermercado</a>
+              <a class="nav__link" href="#">Moda</a>
+              <a class="nav__link" href="#">Vender</a>
+              <a class="nav__link" href="#">Ayuda / PQR</a>
+            </div>
+
+            <div class="nav__bottom--acount">
+              <a class="nav__acount--link" href="#"> Crea tu cuenta </a>
+              <a class="nav__acount--link" href="#"> Ingresa </a>
+              <a class="nav__acount--link" href="#">Mis compras</a>
+              <i class="bi bi-cart-dash"></i>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <section class="hero"></section>
+    <!-- Main Content -->
+    <main class="main__content">
+      <!-- Hero Section -->
+      <section class="hero"></section>
 
-</body>
+      <!-- Options Section -->
+      <section class="options container">
+        <div class="option__card">
+          <h3 class="option__card--title">Ingresa a tu cuenta</h3>
+          <img
+            src="./assets/svg/registration-da.svg"
+            alt=""
+            class="option__card--img"
+          />
+          <p class="option__card--description">
+            Disfruta de ofertas y compras sin limites.
+          </p>
+          <button class="option__card--btn">Ingresar a tu cuenta</button>
+        </div>
+        <div class="option__card">
+          <h3 class="option__card--title">Ingresa tu ubicación</h3>
+          <img
+            src="./assets/svg/location.svg"
+            alt=""
+            class="option__card--img"
+          />
+          <p class="option__card--description">
+            Consulta costos y tiempos de entrega.
+          </p>
+          <button class="option__card--btn">Ingresa tu ubicación</button>
+        </div>
+        <div class="option__card">
+          <h3 class="option__card--title">Medios de pago</h3>
+          <img
+            src="./assets/svg/payment-methods.svg"
+            alt=""
+            class="option__card--img"
+          />
+          <p class="option__card--description">
+            Paga tus compras de forma rapida y segura.
+          </p>
+          <button class="option__card--btn">Conocer medios de pago</button>
+        </div>
+        <div class="option__card">
+          <h3 class="option__card--title">Menos de $40.000</h3>
+          <img
+            src="./assets/svg/low-price-product.svg"
+            alt=""
+            class="option__card--img"
+          />
+          <p class="option__card--description">
+            Descrube productos con precios bajos.
+          </p>
+          <button class="option__card--btn">Mostrar productos</button>
+        </div>
+        <div class="option__card">
+          <h3 class="option__card--title">Más vendidos</h3>
+          <img
+            src="./assets/svg/top-sale.svg"
+            alt=""
+            class="option__card--img"
+          />
+          <p class="option__card--description">
+            Explora los productos que son tendencia.
+          </p>
+          <button class="option__card--btn">Ir a Más vendidos</button>
+        </div>
+        <div class="option__card">
+          <h3 class="option__card--title">Compra protegida</h3>
+          <img
+            src="./assets/svg/buy-protected.svg"
+            alt=""
+            class="option__card--img"
+          />
+          <p class="option__card--description">
+            Puedes devolver tu compra gratis
+          </p>
+          <button class="option__card--btn">Cómo funciona</button>
+        </div>
+      </section>
+
+      <!-- Day Offers Section -->
+      <section class="offers container">
+        <div class="offer__box">
+          <h3 class="offer__box--title">Oferta del dia</h3>
+          <img src="./assets/imgs/hidrolavadora.jpg" alt="" />
+
+          <div class="offer__box--info">
+            <h3 class="box__info--title">
+              Hidrolavadora Electrica TRENT HLT307 1400W Alta presion 1600 Psi
+              110 Bar
+            </h3>
+
+            <del class="delete__price">$500.000</del>
+
+            <div class="box__price">
+              <span class="box__price--price">$296.450</span>
+              <span class="discount">40% OFF</span>
+            </div>
+
+            <p class="box__info--message">
+              en <span class="modifier">3 cuotas de $ 98.817 con 0% interés</span>
+            </p>
+
+            <span class="box__info--delivery">
+              Envío gratis <i class="bi bi-lightning-fill"></i>
+              <span class="modifier">FULL</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="offer__boxes">
+          <div class="offer__boxes--head">
+            <h3 class="offer__boxes--title">Ofertas</h3>
+            <span class="offer__boxes--span"> Mostrar todas las ofertas </span>
+          </div>
+
+          <div class="container__boxes">
+            <div class="box">
+              <img src="./assets/imgs/poco-phone.webp" alt="" class="box__img" />
+              <div class="box__info">
+                <h3 class="box__title">
+                  Celular Xiaomi Poco X7 Pro 5g Dual Sim 512gb Amarillo 12ram 50mpx
+                </h3>
+                <del>$ 1.999.900</del>
+
+                <div class="box__price">
+                  <span class="box__price--price">$ 1.518.900</span>
+                  <span class="box__price--discount">24% OFF</span>
+                </div>
+
+                <p>en <span class="modifier">3 cuotas de $506.300 con 0% interés</span></p>
+
+                <span class="box__info--delivery">Envío gratis</span>
+              </div>
+            </div>
+            <div class="box">
+              <img src="./assets/imgs/poco-phone.webp" alt="" class="box__img" />
+              <h3 class="box__title">
+                Celular Xiaomi Poco X7 Pro 5g Dual Sim 512gb Amarillo 12ram 50mpx
+              </h3>
+              <div class="box__info">
+                <del>$ 1.999.900</del>
+
+                <div class="box__price">
+                  <span class="box__price--price">$ 1.518.900</span>
+                  <span class="box__price--discount">24% OFF</span>
+                </div>
+
+                <p>en <span class="modifier">3 cuotas de $506.300 con 0% interés</span></p>
+
+                <span class="box__info--delivery">Envío gratis</span>
+              </div>
+            </div>
+            <div class="box">
+              <img src="./assets/imgs/poco-phone.webp" alt="" class="box__img" />
+              <h3 class="box__title">
+                Celular Xiaomi Poco X7 Pro 5g Dual Sim 512gb Amarillo 12ram 50mpx
+              </h3>
+              <div class="box__info">
+                <del>$ 1.999.900</del>
+
+                <div class="box__price">
+                  <span class="box__price--price">$ 1.518.900</span>
+                  <span class="box__price--discount">24% OFF</span>
+                </div>
+
+                <p>en <span class="modifier">3 cuotas de $506.300 con 0% interés</span></p>
+
+                <span class="box__info--delivery">Envío gratis</span>
+              </div>
+            </div>
+            <div class="box">
+              <img src="./assets/imgs/poco-phone.webp" alt="" class="box__img" />
+              <h3 class="box__title">
+                Celular Xiaomi Poco X7 Pro 5g Dual Sim 512gb Amarillo 12ram 50mpx
+              </h3>
+              <div class="box__info">
+                <del>$ 1.999.900</del>
+
+                <div class="box__price">
+                  <span class="box__price--price">$ 1.518.900</span>
+                  <span class="box__price--discount">24% OFF</span>
+                </div>
+
+                <p>en <span class="modifier">3 cuotas de $506.300 con 0% interés</span></p>
+
+                <span class="box__info--delivery">Envío gratis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
