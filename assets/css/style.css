@@ -3,10 +3,13 @@
   --main-color: #ffe600;
   --main-blue: #3483fa;
   --main-green: #10ad61;
+  --first-color-gradient: #ff00cc;
+  --second-color-gradient: #333399; 
   --alpha-blue: #009dff2f;
   --grey: #ebebeb;
   --white: #fff;
   --black: #000;
+  --shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   --font-roboto: "Roboto", sans-serif;
 }
 
@@ -36,6 +39,7 @@ button {
 del {
   color: #696969;
   text-decoration: line-through;
+  font-size: 12px;
 }
 
 .container {
@@ -181,7 +185,7 @@ del {
 section.hero {
   height: 50vh;
   width: 100%;
-  background-image: url("../imgs/hero-image-1.webp");
+  background-image: url("../imgs/hero/hero-image-1.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -217,6 +221,7 @@ section.options {
   grid-auto-rows: auto;
   gap: 1rem;
   padding: 20px 0;
+  margin-bottom: 30px;
 }
 
 .option__card {
@@ -228,6 +233,7 @@ section.options {
   border-radius: .5rem;
   z-index: 100;
   cursor: pointer;
+  box-shadow: var(--shadow);
 }
 
 .option__card--title {
@@ -269,10 +275,34 @@ section.options {
 /* ? Products Viewed Section */
 
 section.products__viewed {
-  margin: 30px auto;
   background-color: var(--white);
   padding: 20px;
   border-radius: .4rem;
+  box-shadow: var(--shadow);
+}
+
+section :where(.main__title) {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+section :where(.product img, .offer__box img, .box img) {
+  width: 155px;
+  height: 155px;
+  margin: 0 auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+section :where(.product__info, .offer__box--info, .box__info) {
+  display: grid;
+  gap: 1rem;
+}
+
+section :where(.info__title) {
+  text-overflow: ellipsis;
+  font-weight: 400;
+  font-size: .8rem;
 }
 
 .products__viewed--title {
@@ -294,33 +324,85 @@ section.products__viewed {
   cursor: pointer;
 }
 
-section :where(.main__title) {
-  font-size: 1.5rem;
+.product .product__info--price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .2rem;
+}
+
+.product__info--delivery {
+  color: var(--main-green);
+  font-weight: 600;
+}
+
+/* ? Mercado Play Section */
+section.mercado__play {
+  padding: 20px 30px;
+  background-image: linear-gradient(180deg,rgba(0, 0, 0, .5)), url("../imgs/mercado-play-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  border-radius: .5rem;
+}
+
+.mercado__play--text {
+  padding: 30px 0;
+  display: grid;
+  gap: 2.5rem;
+  place-items: start;
+}
+
+.mercado__play--info {
+  display: grid;
+  gap: .5rem;
+  place-items: start;
+}
+
+.mercado__play--logo {
+  height: 46px;
+  width: 114px;
+}
+
+.mercado__play--title {
+  color: var(--white);
+  font-size: clamp(1.2rem, 4vw, 2rem);
   font-weight: 500;
 }
 
-section :where(.product img, .offer__box img, .box img) {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  aspect-ratio: 1/1;
-  object-fit: cover;
+.mercado__play--free {
+  padding: 5px 10px;
+  color: var(--white);
+  background-color: var(--main-green);
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
-section :where(.product__info, .offer__box--info, .box__info) {
+.mercado__play--btn {
+  background-color: rgba(255, 255, 255, 0.300);
+  color: var(--white);
+  padding: 10px 15px;
+  font-size: .9rem;
+  font-weight: 500;
+  border: transparent;
+  border-radius: .5rem;
+}
+
+.mercado__play--video {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .6)), url("../imgs/pearl-harbor-img.webp");
+  background-position: center;
+  background-size: cover;
+  width: 50%;
   display: grid;
-  gap: 1rem;
-}
-
-section :where(.info__title) {
-  text-overflow: ellipsis;
-  font-weight: 400;
-  font-size: .8rem;
+  place-items: center center;
 }
 
 /* ? Day Offers Section */
 section.offers {
-  margin: 50px auto;
+  margin: 45px auto;
   display: flex;
   gap: 1rem;
 }
@@ -333,16 +415,27 @@ section.offers {
   gap: 1rem;
   border-radius: .4rem;
   cursor: pointer;
+  width: 30%;
+}
+
+.offer__box, 
+.offer__boxes {
+  box-shadow: var(--shadow);
 }
 
 .offer__box--title {
   margin-bottom: 1.5rem;
 }
 
+.offer__box--info .box__info--title {
+  font-size: 1rem;
+}
+
 .offer__boxes {
   padding: 20px;
   background-color: var(--white);
   border-radius: .4rem;
+  width: 80%;
 }
 
 .offer__boxes--head {
@@ -366,7 +459,6 @@ section.offers {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  height: 95%;
 }
 
 .box {
@@ -376,6 +468,10 @@ section.offers {
   cursor: pointer;
 }
 
+.big__delete--price {
+  font-size: 15px;
+}
+
 .box__price {
   display: flex;
   align-items: center;
@@ -383,11 +479,19 @@ section.offers {
 }
 
 .box__price--price {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.box__price .small__price {
+  font-size: 1.2rem;
 }
 
 .box__price--discount {
   font-size: 14px;
+}
+
+.box__info--message {
+  font-size: 13px;
 }
 
 span.modifier,
@@ -395,4 +499,70 @@ span.modifier,
 .box__price--discount,
 .box__info--delivery {
   color: var(--main-green);
+  font-size: 13px;
+}
+
+
+/* ? Subscribe Section */
+section.subscribe {
+  margin: 45px auto;
+  box-shadow: var(--shadow);
+  border-radius: .5rem;
+}
+
+.subscribe__top {
+  color: var(--white);
+  background-image: linear-gradient(
+    to right,
+    var(--first-color-gradient),
+    var(--second-color-gradient)
+  );
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subscribe__top--btn {
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.300);
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  border: transparent;
+  border-radius: .4rem;
+}
+
+.subscribe__bottom {
+  background-color: var(--white);
+  padding: 30px 20px;
+}
+
+.container__subscribe--bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subscribe__bottom--title {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+section.subscribe :where(.subscribe__img) {
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--grey);
+  border-radius: .5rem;
+}
+
+.subscribe__disney,
+.subscribe__delivery {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.description {
+  font-size: .9rem;
 }
