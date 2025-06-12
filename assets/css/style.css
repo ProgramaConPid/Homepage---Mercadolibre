@@ -3,6 +3,7 @@
   --main-color: #ffe600;
   --main-blue: #3483fa;
   --main-green: #10ad61;
+  --main-orange: #ff7733;
   --first-color-gradient: #ff00cc;
   --second-color-gradient: #333399; 
   --alpha-blue: #009dff2f;
@@ -444,7 +445,8 @@ section.offers {
   margin-bottom: 1.5rem;
 }
 
-.offer__boxes--span {
+.offer__boxes--span,
+.benefits__span {
   font-size: 13px;
   color: var(--main-blue);
   font-weight: 500;
@@ -565,4 +567,118 @@ section.subscribe :where(.subscribe__img) {
 
 .description {
   font-size: .9rem;
+}
+
+/* ? Interested Products */
+.interested__products {
+  margin: 45px auto;
+}
+
+/* ? Benefits Section */
+section.benefits {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: .5rem;
+}
+
+.benefits__head {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.container__benefits {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.benefits__box {
+  height: 300px;
+  padding: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  border-radius: .6rem;
+}
+
+.container__benefits .benefits__box:first-child {
+  background-image: url("../imgs/mercado-play-bg.png");
+}
+
+.container__benefits .benefits__box:nth-child(2) {
+  background-image: url("../imgs/max-bg.jpg");
+}
+
+.container__benefits .benefits__box:last-child {
+  background-image: url("../imgs/paramount-bg.jpg");
+}
+
+.benefits__content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.benefits__box img {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  border-radius: .5rem;
+}
+
+.benefits__info {
+  color: var(--white);
+}
+
+/* ? Brands Section */
+section.brands {
+  margin: 40px auto;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.brands__box {
+  width: 100%;
+  display: flex;
+}
+
+.brands__box > img {
+  height: auto;
+  width: 50%;
+  border-radius: .5rem 0 0 .5rem;
+}
+
+.brands__box--info {
+  color: var(--white);
+  width: 57%;
+  background-color: var(--main-orange);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0 .5rem .5rem 0;
+}
+
+.brands__box--info > img {
+  height: 80px;
+  width: 100px;
+  border-radius: .5rem;
+}
+
+.brands__box--title {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.brands__box--paragraph {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.brands__box--link {
+  color: var(--white);
 }
