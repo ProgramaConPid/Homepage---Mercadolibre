@@ -1,9 +1,11 @@
-/* Variables */
+/* ? Variables */
 :root {
   --main-color: #ffe600;
   --main-blue: #3483fa;
   --main-green: #10ad61;
   --main-orange: #ff7733;
+  --main-grey: #f5f5f5;
+  --grey-text: rgba(0, 0, 0, .55);
   --first-color-gradient: #ff00cc;
   --second-color-gradient: #333399; 
   --alpha-blue: #009dff2f;
@@ -14,7 +16,7 @@
   --font-roboto: "Roboto", sans-serif;
 }
 
-/* General Styles */
+/* ? General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -332,11 +334,6 @@ section :where(.info__title) {
   gap: .2rem;
 }
 
-.product__info--delivery {
-  color: var(--main-green);
-  font-weight: 600;
-}
-
 /* ? Mercado Play Section */
 section.mercado__play {
   padding: 20px 30px;
@@ -393,7 +390,7 @@ section.mercado__play {
 }
 
 .mercado__play--video {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, .6)), url("../imgs/pearl-harbor-img.webp");
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .6)), url("../imgs/TV/pearl-harbor-img.webp");
   background-position: center;
   background-size: cover;
   width: 50%;
@@ -499,7 +496,8 @@ section.offers {
 span.modifier,
 .discount,
 .box__price--discount,
-.box__info--delivery {
+.box__info--delivery,
+.product__info--delivery {
   color: var(--main-green);
   font-size: 13px;
 }
@@ -609,11 +607,11 @@ section.benefits {
 }
 
 .container__benefits .benefits__box:nth-child(2) {
-  background-image: url("../imgs/max-bg.jpg");
+  background-image: url("../imgs/TV/max-bg.jpg");
 }
 
 .container__benefits .benefits__box:last-child {
-  background-image: url("../imgs/paramount-bg.jpg");
+  background-image: url("../imgs/TV/paramount-bg.jpg");
 }
 
 .benefits__content {
@@ -682,3 +680,270 @@ section.brands {
 .brands__box--link {
   color: var(--white);
 }
+
+.brands__box--link i {
+  vertical-align: middle;
+}
+
+/* ? Smartphones Section */
+.smartphones__head {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.smartphones__head--title {
+  margin-bottom: 0;
+}
+
+.smartphones__head--span {
+  font-size: 13px;
+  color: var(--main-blue);
+  font-weight: 500;
+  align-self: top;
+  position: relative;
+  top: .2rem;
+}
+
+/* ? Discovery Section */
+section.discovery {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 40px;
+}
+
+.discovery__box {
+  color: #4a4a4a;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .3rem;
+}
+
+.discovery__box--text {
+  padding: 0 30px;
+  display: grid;
+  gap: 1rem;
+  place-items: start;
+}
+
+.discovery__box--title {
+  width: 90%;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.discovery__box--paragraph {
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+.discovery__box img {
+  width: 250px;
+  height: 250px;
+  aspect-ratio: 1/1;
+  border-radius: 0 .5rem .5rem 0;
+}
+
+.discovery__box--btn {
+  color: var(--white);
+  background-color: var(--main-blue);
+  padding: 10px 30px;
+  display: inline-block;
+  font-size: 1rem;
+  border: none;
+  border-radius: .5rem;
+}
+
+/* ? Categories Section */
+section.categories {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: .5rem;
+  margin-bottom: 45px;
+}
+
+.container__categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+  grid-auto-rows: auto;
+  gap: 1rem;
+}
+
+.categorie__box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.300);
+  border-radius: .4rem;
+  overflow: hidden;
+}
+
+.categorie__box--image {
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1/1;
+  background-color: var(--main-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categorie__box--image img {
+  width: 80%;
+  height: 80%;
+}
+
+.categorie__box--text {
+  padding-right: 10px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* ? Shopping Section */
+section.shopping__info {
+  background-color: var(--white);
+  padding: 30px 0;
+}
+
+.container__shopping {
+  display: flex;
+}
+
+.shopping__info--box {
+  padding: 35px 45px 20px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 1rem;
+  flex: 1;
+  position: relative;
+}
+
+.shopping__info--box:nth-child(2) {
+  height: 70%;
+}
+
+.shopping__info--box:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 1px;
+  background-color: #e2e2e2;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.shopping__info--box:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 1px;
+  background-color: #e2e2e2;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.shopping__info--box:last-child {
+  height: 25%;
+  gap: .5rem;
+}
+
+.shopping__box--text {
+  display: grid;
+  gap: 1rem;
+}
+
+.shopping__text--title {
+  color: #4b4b4b;
+  font-weight: 400;
+}
+
+.shopping__text--description {
+  color: var(--grey-text);
+}
+
+.shopping__text--link {
+  color: var(--main-blue);
+  font-weight: 500;
+}
+
+/* ? Searched Products Section */
+section.searched__products {
+  background-color: var(--white);
+  padding: 30px 0;
+}
+
+.container__searched--products {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.searched__products--title {
+  font-size: 18px;
+}
+
+.searched__products--list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  list-style: none;
+  gap: .5rem;
+}
+
+.searched__products--item {
+  position: relative;
+  padding: 0 2px;
+}
+
+.searched__products--item::after {
+  content: "-";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 4px;
+  color: var(--grey-text);
+}
+
+.searched__products--item:last-child::after {
+  content: unset;
+}
+
+.searched__products--item a,
+.glossary__list--item a {
+  color: var(--grey-text);
+  font-weight: 400;
+}
+
+/* ? Glossary Section */
+section.glossary {
+  padding: 20px 0;
+  background-color: var(--white);
+}
+
+.glossary__title {
+  font-size: 14px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.glossary__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: .7rem;
+}
+
+.glossary__list--separator {
+  height: 1px;
+  width: 5px;
+  background-color: var(--grey-text);
+  margin-block: auto;
+}
+
+
